@@ -3,15 +3,16 @@
 <% if i.alive %>
 <div class="new-listing">
 <div class="listing-info">
-<%= i.name %>
-<%= i.body %>
-<%= i.price %>
-<%= i.category %>
-<%= i.tag %>
-<%= i.created_at %>
-<%= i.alive %>
+<%= content_tag 'span', i.name, class: "listing-name" %>
+<%= content_tag 'span', i.body, class: "listing-body" %>
+<%= content_tag 'span', i.price, class: "listing-price" %>
+<%= content_tag 'span', i.category, class: "listing-category" %>
+<%= content_tag 'span', i.tag, class: "listing-tag" %>
+<%= content_tag 'span', i.created_at, class: "listing-date" %>
+<%= content_tag 'span', i.alive, class: "listing-active" %>
 </div>
 <div class="user-info">
+
 </div>
 </div>
 <% end %>
