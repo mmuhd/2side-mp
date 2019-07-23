@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'app/show', to: 'app#show', as: 'show'
   post 'app/show', to: 'app#show', as: 'show_with_filters'
   get 'app/listing/:id', to: 'app#listing', as: 'listing'
+  get 'user/new_listing', to: 'user#new_listing', as: 'new_listing'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
