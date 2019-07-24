@@ -25,7 +25,7 @@
     <div class="listing-info">
     <%= link_to  "this will be a image", listing_path(i.id) %>
     <%= content_tag 'span', i.name, class: "listing-name" %>
-    <%= content_tag 'span', i.price, class: "listing-price" %>
+    <%= content_tag 'span', "$#{i.price.round(2)}" , class: "listing-price" %>
     </div>
     <div class="user-info">
 
