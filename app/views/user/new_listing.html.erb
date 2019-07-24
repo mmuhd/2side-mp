@@ -1,8 +1,18 @@
 <h1>Create Listing</h1>
 
+<div class="new-listing-field">
 <%= form_with url: create_listing_path do |form| %>
+  <%= form.label :name, "Name"%>
   <%= form.text_field :name %>
+  <%= form.label :body, "Description" %>
   <%= form.text_field :body %>
+  <%= form.label :price, "Price" %>
   <%= form.number_field :price %>
+  <%= form.label :category, "Category" %>
+  <%= form.select :category, ["Domain","WebSite","App"]%>
+  <%= form.label :tag, "Tag" %>
+  <%= form.select :tag, ["ecom","template","wordpress"]%>
+  <%= form.file_field :image %>
   <%= form.submit "Create Lising" %>
 <% end %>
+</div>
