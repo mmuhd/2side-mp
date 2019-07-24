@@ -8,7 +8,7 @@ class AppController < ApplicationController
 
 
   def show
-    @listings = Listing.where(alive: true).all.reorder('created_at DESC')
+    @listings = get_listing(params)
   end
 
 
@@ -17,4 +17,20 @@ class AppController < ApplicationController
     @listing = Listing.where(id: id).first
     
   end
+
+
+
+  def get_listing(params)
+    if params[:like]
+      like = params[:like]
+      puts "Good"
+      return @listings = Listing.where('name LIKE ?', '%' + like + '%')
+    else
+      puts "Also Good"
+      return @listings = Listing.where(alive: true).all.reorder('created_at DESC')
+    end
+  end
+
+
+
 end
