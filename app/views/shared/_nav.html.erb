@@ -2,8 +2,10 @@
  <% if user_signed_in? %>
    <div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
    <div id="username"><%= current_user.name %></div>
-
-    <div id="avatar"><%= image_tag current_user.avatar, width: 120 %></div> 
+  <% if current_user.avatar.attached? %>
+  <div id="avatar"><%= image_tag current_user.avatar, width: 120 %></div> 
+  <% end %>
+    
 
  <% else %>
    <p><%= link_to 'Login', new_user_session_path, class:"top-nav-link"%>
@@ -13,5 +15,6 @@
  <% end %>
 
 <%= link_to  "Home", root_path %>
+<%= link_to  "View All Listings", show_path %>
 
 </section>

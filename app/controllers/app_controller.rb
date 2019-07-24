@@ -9,6 +9,15 @@ class AppController < ApplicationController
 
   def show
     @listings = Listing.where(alive: true).all.reorder('created_at DESC')
+    if params
+      puts "parms"
+      
+      params.each do |p|
+        puts p
+      end
+      
+    end
+    
   end
 
 
