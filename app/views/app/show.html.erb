@@ -2,14 +2,13 @@
 
 <div class="filter">
 
-<%= form_with url: show_with_filters_path, local: true do |form| %>
+<%= form_with url: show_search_path, local: true do |form| %>
 <div>
 <%= form.select :category, ['Website', 'Domain', 'App'] %>
 <%= form.select :tag, ['Website', 'Domain', 'App'] %>
+<%= form.text_field :like %>
+<%= form.submit "Search", id: "Submit" %>
 </div>
-    <div>
-    <%= form.submit "Search", id: "Submit" %>
-  </div>
 <% end %>
 
 
