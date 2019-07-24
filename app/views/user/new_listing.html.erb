@@ -1,1 +1,8 @@
 <h1>Create Listing</h1>
+
+<%= form_with url: create_listing_path do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :body %>
+  <%= form.number_field :price %>
+  <%= form.submit "Create Lising" %>
+<% end %>
