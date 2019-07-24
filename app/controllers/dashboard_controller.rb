@@ -16,7 +16,10 @@ class DashboardController < ApplicationController
       tag = params[:tag]
       user = current_user
       
+     
+
       l = Listing.new
+      l.image.attach(params[:listing][:image])
       l.name = name
       l.body = body
       l.price = price
