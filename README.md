@@ -5,18 +5,6 @@
 
 > A Two Sided Marketplace
 
-## Install
-
-```sh
-bundle install
-```
-
-## Usage
-
-```sh
-rails s
-```
-
 ## Author
 
 👤 **Huxley**
@@ -35,22 +23,46 @@ Give a ⭐️ if this project helped you!
 
 ## Docs stuff
 
-- A link (URL) to your published App
+[Check it out](https://codemp-ca.herokuapp.com/)
 
-* A link to your GitHub repository
+[Github](https://github.com/BoooTv/2side-mp)
 
-- Description of your project, including,
+ ### Description of your project, including,
 - Problem definition / purpose
 - Functionality / features
 - Screenshots
-- Tech stack (e.g. html, css, deployment platform, etc)
-- Instructions on how to setup, configure and use your App.
-- Design documentation including,
+
+    ### TechStack
+    ##### FrontEnd
+    - html
+    - scss
+    ##### BackEnd
+    - ruby
+    - ruby on rails
+    ##### Database
+    - postgresql
+    ##### Other
+    - heroku (For hosting project)
+    - cloudanary (For image hosting)
+    
+    
+  ### Set up and run  
+  Setting up and running is very simple
+    
+    `
+    git clone https://github.com/BoooTv/2side-mp &&
+    cd 2side-mp &&
+    bundle install && 
+    rails db:setup &&
+    rails s
+    `
+    
+  Then open localhost:3000 in your browser
+    
+    
+ ### Design documentation including,
 - Design process
 - User stories
-
-![user stories](docs/userstories.png)
-
 - A workflow diagram of the user journey/s.
 - Wireframes
 - Database Entity Relationship Diagrams
@@ -58,7 +70,9 @@ Give a ⭐️ if this project helped you!
 
 ### Project Planning and Timeline
 
-#### Trello
+#### Project management
+For project management we decided to use [github projects](https://github.com/BoooTv/2side-mp/projects/1)
+
 
 - Answers to the Short Answer questions (Section 2.2)
 -

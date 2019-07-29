@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'dashboard/new_listing', to: 'dashboard#new_listing', as: 'new_listing'
   post 'dashboard/create_listing', to: 'dashboard#create_listing', as: 'create_listing'
   delete 'dashboard/delete_listing/:id', to: 'dashboard#delete_listing', as: 'delete_listing'
+  get 'app/profile/:id', to: 'app#profile', as: 'profile'
   devise_for :users
   # payments route
   get "orders", to: "orders#new", as: "new_order"
