@@ -1,5 +1,4 @@
-<h1>User#dashboard</h1>
-<p>Find me in app/views/user/dashboard.html.erb</p>
+<h1><%= "Hello #{current_user.name}" %></h1>
 
 
 
@@ -7,3 +6,16 @@
 
 
 <%= link_to "create listing", new_listing_path %>
+
+
+
+<div>
+  <% @my_listings.each do |l| %>
+    <br>
+    <%= l.name %>
+    :([|\{?}/|]):
+    <%= l.created_at %>
+    <%= link_to("Delete", delete_listing_path(l.id), method: :delete) %>
+    <%#= link_to("Edit", li) %>
+  <% end %>
+</div>
