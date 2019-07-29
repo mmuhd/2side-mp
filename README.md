@@ -50,14 +50,14 @@ Give a ⭐️ if this project helped you!
   Setting up and running is very simple
     
     `
-    git clone https://github.com/BoooTv/2side-mp
-    cd 2side-mp
-    bundle install
-    rails db:setup
+    git clone https://github.com/BoooTv/2side-mp &&
+    cd 2side-mp &&
+    bundle install && 
+    rails db:setup &&
     rails s
     `
     
-   Then open localhost:3000 in your browser
+  Then open localhost:3000 in your browser
     
     
  ### Design documentation including,
