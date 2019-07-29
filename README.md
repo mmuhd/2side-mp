@@ -99,4 +99,3 @@ For project management we decided to use [github projects](https://github.com/Bo
 - Discuss and analyse requirements related to information system security.
 - Discuss methods you will use to protect information and data.
 - Research what your legal obligations are in relation to handling user data.
--
