@@ -26,9 +26,11 @@ class DashboardController < ApplicationController
       l.alive = true
       l.user = user
       if l.save
-        puts "saved to db"
+        flash[:alert] = "Added new listing"
+        redirect_to user_dashboard_path
       else
-        puts "why"
+        flash[:alert] = "Failed to make new listing"
+        redirect_to user_dashboard_path
       end
 
     end
@@ -39,6 +41,17 @@ class DashboardController < ApplicationController
         # success
       else
         # error handling
+      end
+    end
+
+
+    def delete_listing
+      if Listing.destroy(params[:id])
+        flash[:alert] = "Listing #{params[:id]} deleted"
+        redirect_to user_dashboard_path
+      else
+        flash[:alert] = "Failed to delete listing #{params[:id]}"
+        redirect_to user_dashboard_path
       end
     end
 end
