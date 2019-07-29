@@ -1,6 +1,6 @@
 
     <div class="listing-info">
-      <h1><%=  "#{@listing.name}" %></h1>
+      <h1><%=  @listing.name %></h1>
       <br>
       <i><h2><%= number_to_currency @listing.price %></h2></i>
       <br>
@@ -23,6 +23,6 @@
       <i><%=  "Listing by #{@listing.user.name}" %></i>
       <%= link_to 'View Profile', profile_path(@listing.user) %>
       <% if @listing.user.avatar.attached? %>
-      <%= image_tag @listing.user.avatar , width: '200px'%>
+      <%= image_tag @listing.user.avatar, width: '200px'%>
       <% end %>
     </div>
