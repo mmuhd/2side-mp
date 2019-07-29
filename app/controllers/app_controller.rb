@@ -15,7 +15,6 @@ class AppController < ApplicationController
   def listing
     id = params[:id]
     @listing = Listing.where(id: id).first
-    
   end
 
 
