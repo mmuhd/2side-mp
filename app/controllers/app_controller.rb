@@ -30,6 +30,11 @@ class AppController < ApplicationController
     end
   end
 
+  def profile
+    @user = User.find(params[:id])
+    @user_listing = Listing.where(user: params[:id])
+  end
+
 
 
 end

@@ -15,7 +15,8 @@
     </div>
     <div class="user-info">
       <i><%=  "Listing by #{@listing.user.name}" %></i>
+      <%= link_to 'View Profile', profile_path(@listing.user) %>
       <% if @listing.user.avatar.attached? %>
-      <%= image_tag @listing.user.avatar %>
+      <%= image_tag @listing.user.avatar , width: '200px'%>
       <% end %>
     </div>

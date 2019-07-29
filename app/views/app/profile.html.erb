@@ -1,0 +1,12 @@
+<h1><%= @user.name %></h1>
+
+
+
+
+<% @user_listing.each do |l| %>
+  <%= l.name %>
+  <%= link_to "View Listing", listing_path(l.id) %>
+  <br>
+<% end %>
+
+
