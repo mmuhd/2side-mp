@@ -7,3 +7,14 @@
 
 
 <%= link_to "create listing", new_listing_path %>
+
+
+
+<div>
+  <% @my_listings.each do |l| %>
+    <br>
+    <%= l.name %>
+    <%= l.created_at %>
+    <%= link_to "Delete Listing", delete_listing_path(l.id) %>
+  <% end %>
+</div>

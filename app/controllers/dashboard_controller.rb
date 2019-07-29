@@ -1,13 +1,14 @@
 class DashboardController < ApplicationController
     before_action :user_signed_in?
     def dashboard
+      @my_listings = Listing.where(user: current_user)
     end
-  
-  
-    def new_listing 
+
+
+    def new_listing
     end
-  
-  
+
+
     def create_listing
       name = params[:name]
       body = params[:body]
@@ -15,7 +16,7 @@ class DashboardController < ApplicationController
       category = params[:category]
       tag = params[:tag]
       user = current_user
-      
+
       l = Listing.new
       l.name = name
       l.body = body
@@ -29,11 +30,9 @@ class DashboardController < ApplicationController
       else
         puts "why"
       end
-      
+
     end
-  
-  
-  
+
     def update_listing
       @listing = Listing.where(id: params[:id])
       if @listing.save

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'app/listing/:id', to: 'app#listing', as: 'listing'
   get 'dashboard/new_listing', to: 'dashboard#new_listing', as: 'new_listing'
   post 'dashboard/create_listing', to: 'dashboard#create_listing', as: 'create_listing'
+  get 'dashboard/delete_listing/:id', to: 'dashboard#delete_listing', as: 'delete_listing'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
