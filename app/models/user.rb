@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :avatar
-  has_many :listings
+  has_many :listings, :orders
 
   def name
     return username ? username : email
