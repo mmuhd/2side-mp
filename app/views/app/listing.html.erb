@@ -1,14 +1,21 @@
 
     <div class="listing-info">
-    <%=  @listing.name %>
-    <%=  @listing.body %>
-    <%=  @listing.price %>
-    <%=  @listing.category %>
-    <%=  @listing.tag %>
-    <%=  @listing.created_at %>
-    <%=  @listing.alive %>
+      <h1><%=  "#{@listing.name}" %></h1>
+      <br>
+      <i><h2><%=  "$#{@listing.price.round(2)}" %></h2></i>
+      <br>
+      <h3>Description</h3>
+      <%=  @listing.body %>
+      <br>
+      <br>
+      <h5><%= "Category: #{@listing.category} / Tag: #{@listing.tag}" %></h5>
+      <br>
+      <%=  "Date added #{@listing.created_at}" %>
+      <br>
     </div>
     <div class="user-info">
-
+      <i><%=  "Listing by #{@listing.user.name}" %></i>
+      <% if @listing.user.avatar.attached? %>
+      <%= image_tag @listing.user.avatar %>
+      <% end %>
     </div>
-
