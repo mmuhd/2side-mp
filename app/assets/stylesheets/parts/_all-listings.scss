@@ -1,0 +1,31 @@
+.listings {
+  background-color: coral;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+  .listing-info {
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #999999;
+    .listing-name {
+      background-color: #4f2eff;
+      display: block;
+
+    }
+    .listing-price {
+      background-color: #b0a317;
+      display: block;
+    }
+  .listing-img {
+    height: 150px;
+    display: block;
+    margin: auto;
+  }
+
+  }
+}
+

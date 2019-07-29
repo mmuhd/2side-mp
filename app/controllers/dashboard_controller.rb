@@ -26,7 +26,7 @@ class DashboardController < ApplicationController
       l.category = category
       l.tag = tag
       l.alive = true
-      # l.created_by = user
+      l.user = user
       if l.save
         puts "saved to db"
       else

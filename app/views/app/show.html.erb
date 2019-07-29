@@ -2,13 +2,11 @@
 
 <div class="filter">
 
-<%= form_with url: show_with_filters_path, local: true do |form| %>
+<%= form_with url: show_search_path, local: true do |form| %>
 <div>
-<%= form.select :desired_attribute, ['Website', 'Domain', 'App'] %>
+<%= form.text_field :like %>
+<%= form.submit "Search", id: "Submit" %>
 </div>
-    <div>
-    <%= form.submit "Search", id: "Submit" %>
-  </div>
 <% end %>
 
 
@@ -21,15 +19,10 @@
 <div class="listings">
     <% @listings.each do |i| %>
     <% if i.alive %>
-    <div class="new-listing">
     <div class="listing-info">
-    <%= link_to  "this will be a image", listing_path(i.id) %>
-    <%= content_tag 'span', i.name, class: "listing-name" %>
-    <%= content_tag 'span', i.price, class: "listing-price" %>
-    </div>
-    <div class="user-info">
-
-    </div>
+    <%= link_to  "image", listing_path(i.id) , class: "listing-img"%>
+    <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
+    <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
     </div>
     <% end %>
     <% end %>

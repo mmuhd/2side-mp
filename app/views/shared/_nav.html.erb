@@ -1,17 +1,24 @@
 <section class="top-nav">
  <% if user_signed_in? %>
    <div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
-   <div id="username"><%= current_user.name %></div>
-
-    <div id="avatar"><%= image_tag current_user.avatar, width: 120 %></div> 
+    <%= link_to  "Home", root_path %>
+    <%= link_to  "View All Listings", show_path %>
+    <%= link_to 'Dashboard', user_dashboard_path %>
+    <div id="username"><%= "Hello #{current_user.name.capitalize}" %></div>
+    <% if current_user.avatar.attached? %>
+  <div id="avatar"><%= image_tag current_user.avatar, width: 120 %></div> 
+  <% end %>
 
  <% else %>
    <p><%= link_to 'Login', new_user_session_path, class:"top-nav-link"%>
    |
    <%= link_to 'Sign Up', new_user_registration_path, class:"top-nav-link"%>
    </p>
+
+    <%= link_to  "Home", root_path %>
+    <%= link_to  "View All Listings", show_path %>
  <% end %>
 
-<%= link_to  "Home", root_path %>
+
 
 </section>
