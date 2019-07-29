@@ -24,7 +24,6 @@ Your order
 <script>
 var stripe = Stripe('pk_test_9rD5F4TuUHm6V7yY2VR9fcuk00nzmLWDPO');
 
-
 function redirectToStripe() {
 stripe.redirectToCheckout({
 sessionId: '<%= @session.id %>'

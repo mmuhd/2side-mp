@@ -14,8 +14,16 @@ class OrdersController < ApplicationController
     currency: 'aud',
     quantity: 1,
     }],
-    success_url: 'http://localhost:3000/orders/complete',
+    success_url: "http://localhost:3000/orders/complete/#{@listing.id}",
     cancel_url: 'http://localhost:3000/orders/cancel',
     )
+    order = Order.new
+    order.session_id = @session.id
+    order.listing = @listing
+    order.user = User.find(@listing.user.id)
+    order.completed = false
+    if order.after_save 
+      flash[:alert]= "saved"
+    end
   end
 end

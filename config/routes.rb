@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   devise_for :users
   # payments route
   get 'orders', to: 'orders#new', as: 'new_order'
-  get 'orders/complete', to: 'orders#complete'
+  get 'orders/complete/:id', to: 'orders#complete'
   get 'orders/cancel', to: 'orders#cancel'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
