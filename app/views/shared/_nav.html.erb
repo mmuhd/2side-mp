@@ -3,7 +3,7 @@
     <%= link_to  "Browse", show_path, class:"top-nav-link" %>
  <% if user_signed_in? %>
     <div class="filter">
-      <%= form_with url: show_search_path, local: true do |form| %>
+      <%= form_with url: show_id_path, local: true do |form| %>
       <div>
           <%= form.text_field :like %>
           <%= form.submit "Search", id: "Submit" %>

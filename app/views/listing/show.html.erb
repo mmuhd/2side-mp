@@ -1,0 +1,71 @@
+<% if params[:id] %>
+
+  <!--single listing-->
+
+
+  <div class="listing-info">
+    <h1><%=  @listing.name %></h1>
+    <br>
+    <i><h2><%= number_to_currency @listing.price %></h2></i>
+    <br>
+    <% if @listing.price %>
+      <p>
+        <%= number_to_currency @listing.price %>
+        <%= link_to "Buy now", new_order_path(listing_id: @listing.id) %>
+      </p>
+    <% end %>
+    <h3>Description</h3>
+    <%=  @listing.body %>
+    <br>
+    <br>
+    <h5><%= "Category: #{@listing.category} / Tag: #{@listing.tag}" %></h5>
+    <br>
+    <%=  "Date added #{@listing.created_at}" %>
+    <br>
+  </div>
+  <div class="user-info">
+    <i><%=  "Listing by #{@listing.user.name}" %></i>
+    <%= link_to 'View Profile', profile_path(@listing.user) %>
+    <% if @listing.user.avatar.attached? %>
+      <%= image_tag @listing.user.avatar, width: '200px'%>
+    <% end %>
+  </div>
+
+
+<% else %>
+
+  <!--  All listings-->
+
+  <h1>Listings</h1>
+  <p>
+    Displaying <%= @listings.count %> listings.
+  </p>
+  <div class="filter">
+
+    <%= form_with url: show_search_path, local: true do |form| %>
+      <div>
+        <%= form.text_field :like %>
+        <%= form.submit "Search", id: "Submit" %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+
+
+  <div class="listings">
+    <% @listings.each do |i| %>
+      <% if i.alive %>
+        <div class="listing-info">
+          <%= link_to  "image", show_id_path(i.id) , class: "listing-img"%>
+          <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
+          <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+
+<% end %>
