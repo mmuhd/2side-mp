@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
   has_many :listings
+  has_many :orders
 
   def name
     return username ? username : email
