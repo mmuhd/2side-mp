@@ -1,8 +1,8 @@
 @import "parts/nav";
 @import "parts/all-listings";
 
-
-*,html {
+*,
+html {
   margin: 0;
   padding: 0;
 }
@@ -14,7 +14,10 @@
   background-color: gray;
   color: aquamarine;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 75px;
   right: 10px;
 }
 
+#dash_splash {
+  width: 100vw;
+}

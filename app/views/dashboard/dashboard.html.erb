@@ -1,10 +1,12 @@
+
+<%= image_tag "dash_splash.jpg", id:"dash_splash"%>
 <h1><%= "Hello #{current_user.name}" %></h1>
 
 
 
 <!--Some tmp links to make life ez-->
 
-
+<%= link_to 'Edit Profile', edit_user_registration_path, class:"top-nav-link"%>
 <%= link_to "create listing", new_listing_path %>
 
 
