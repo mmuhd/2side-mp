@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Order.destroy_all
 Listing.destroy_all
 User.destroy_all
+
 
 
 10.times do |db|
@@ -22,6 +24,7 @@ User.destroy_all
         ls.body = "this is a body"
         ls.price = rand(1.00..999.99)
         ls.alive = true
+        ls.deleted = false
         ls.category = "domain"
         ls.tag = "test_tag"
         ls.created_at = Date.new(rand(1000..2077),rand(1..12),rand(1..30))
