@@ -1,6 +1,7 @@
 <h1 align="center">Welcome to 2side-mp 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/github/issues/BoooTv/2side-mp?style=for-the-badge" />
+  <img src="https://img.shields.io/twitter/url/https/github.com/BoooTv/2side-mp?style=for-the-badge"/>
 </p>
 
 > A Two Sided Marketplace
@@ -29,21 +30,28 @@ Give a ⭐️ if this project helped you!
 
  ### Description of your project, including,
 - Problem definition / purpose
-- Functionality / features
-- Screenshots
+##### Functionality / features
+- Payment
+- Create listings
+- Buy items
+- leave reviews
 
-    ### TechStack
-    ##### FrontEnd
-    - html
-    - scss
-    ##### BackEnd
-    - ruby
-    - ruby on rails
-    ##### Database
-    - postgresql
-    ##### Other
-    - heroku (For hosting project)
-    - cloudanary (For image hosting)
+
+##### ScreenShots
+
+
+### TechStack
+##### FrontEnd
+- html
+- scss
+##### BackEnd
+- ruby
+- ruby on rails
+##### Database
+- postgresql
+##### Other
+- heroku (For hosting project)
+- cloudanary (For image hosting)
     
     
   ### Set up and run  
@@ -65,7 +73,8 @@ Give a ⭐️ if this project helped you!
 - User stories
 - A workflow diagram of the user journey/s.
 - Wireframes
-- Database Entity Relationship Diagrams
+ ##### Database Entity Relationship Diagrams
+![database](docs/2sidemp.png?raw=true "Database diagram")
 - Details of planning process including,
 
 ### Project Planning and Timeline
@@ -92,6 +101,7 @@ For project management we decided to use [github projects](https://github.com/Bo
 - Provide your database schema design.
 - Provide User stories for your App.
 - Provide Wireframes for your App.
+![Wireframe](docs/Wireframe.png "Wireframe")
 - Describe the way tasks are allocated and tracked in your project.
 - Discuss how Agile methodology is being implemented in your project.
 - Provide an overview and description of your Source control process.
