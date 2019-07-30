@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
     before_action :user_signed_in?
     def dashboard
-      @my_listings = Listing.where(user: current_user)
+      @my_listings = Listing.where(user: current_user, deleted: false )
     end
 
 
@@ -24,6 +24,7 @@ class DashboardController < ApplicationController
       l.category = category
       l.tag = tag
       l.alive = true
+      l.deleted = false
       l.user = user
       if l.save
         flash[:alert] = "Added new listing"
@@ -46,7 +47,10 @@ class DashboardController < ApplicationController
 
 
     def delete_listing
-      if Listing.destroy(params[:id])
+      listing = Listing.find(params[:id])
+      listing.deleted = true
+      listing.alive = false
+      if listing.save
         flash[:alert] = "Listing #{params[:id]} deleted"
         redirect_to user_dashboard_path
       else
