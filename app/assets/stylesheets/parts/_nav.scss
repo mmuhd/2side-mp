@@ -1,6 +1,19 @@
 .top-nav {
   display: flex;
+  color: azure;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 20px 0;
+  height: 50px;
+  padding: 20px 0 0 10px;
+  background-color: green;
+
+  .top-nav-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  #user-nav {
+    font-size: 0.8rem;
+    color: azure;
+  }
 }

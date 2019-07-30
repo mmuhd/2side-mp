@@ -1,20 +1,16 @@
-<div id="new-listings">
-<% @new_listings.each do |i| %>
-<% if i.alive %>
-<div class="new-listing">
-<div class="listing-info">
-<%= content_tag 'span', i.name, class: "listing-name" %>
-<%= content_tag 'span', i.body, class: "listing-body" %>
-<%= content_tag 'span', i.price, class: "listing-price" %>
-<%= content_tag 'span', i.category, class: "listing-category" %>
-<%= content_tag 'span', i.tag, class: "listing-tag" %>
-<%= content_tag 'span', i.created_at, class: "listing-date" %>
-<%= content_tag 'span', i.alive, class: "listing-active" %>
+<div class="welcome">
+    <h1>Welcome to CodeMP</h1>
+    <h2>The #1 Marketplace for Code!</h2>
+    <br/>
 </div>
-<div class="user-info">
-
-</div>
-</div>
-<% end %>
-<% end %>
+<div class="listings">
+    <% @new_listings.each do |i| %>
+    <% if i.alive %>
+    <div class="listing-info">
+    <%= link_to  "image", listing_path(i.id) , class: "listing-img"%>
+    <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
+    <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
+    </div>
+    <% end %>
+    <% end %>
 </div>

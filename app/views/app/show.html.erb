@@ -1,15 +1,15 @@
 <h1>Listings</h1>
-
+<p>
+    Displaying <%= @listings.count %> listings.
+</p>
 <div class="filter">
 
-<%= form_with url: show_search_path, local: true do |form| %>
-<div>
-<%= form.text_field :like %>
-<%= form.submit "Search", id: "Submit" %>
-</div>
+    <%= form_with url: show_search_path, local: true do |form| %>
+    <div>
+        <%= form.text_field :like %>
+        <%= form.submit "Search", id: "Submit" %>
+    </div>
 <% end %>
-
-
 </div>
 
 
