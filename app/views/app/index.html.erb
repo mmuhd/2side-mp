@@ -7,7 +7,7 @@
     <% @new_listings.each do |i| %>
     <% if i.alive %>
     <div class="listing-info">
-    <%= link_to  "image", listing_path(i.id) , class: "listing-img"%>
+    <%= link_to  "image", show_id_path(i.id), class: "listing-img"%>
     <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
     <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
     </div>
