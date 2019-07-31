@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe ListingController, type: :controller do
 
-  user = User.create!(email: "test@#{rand(-1999.000)}", password: 'password')
-
 
   # Please fix this test
   # describe "GET #show" do
