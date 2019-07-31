@@ -3,9 +3,17 @@
   color: azure;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 50px;
-  padding: 20px 0 0 10px;
+  height: 70px;
+  padding: 10px 0 0 10px;
   background-color: green;
+
+  #avatar {
+    img {
+      width: 60px;
+      border-radius: 10px;
+    }
+
+  }
 
   .top-nav-link {
     font-size: 20px;
@@ -16,4 +24,9 @@
     font-size: 0.8rem;
     color: azure;
   }
+
 }
+
+
+
+
