@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   include RestClient
 
+  before_action :authenticate_user!
   def new
     @listing = Listing.find(params[:listing_id])
     
@@ -88,7 +89,7 @@ class OrdersController < ApplicationController
   end
 
 
-  before_action :user_signed_in?
+  before_action :authenticate_user!
   def history
     @order_history = Order.where(buyer: current_user.id).where(completed: true)
   end

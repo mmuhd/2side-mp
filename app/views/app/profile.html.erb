@@ -5,7 +5,7 @@
 
 <% @user_listing.each do |l| %>
   <%= l.name %>
-  <%= link_to "View Listing", listing_path(l.id) %>
+  <%= link_to "View Listing", show_id_path(l.id) %>
   <br>
 <% end %>
 
