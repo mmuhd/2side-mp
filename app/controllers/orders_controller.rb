@@ -26,8 +26,8 @@ class OrdersController < ApplicationController
     currency: 'aud',
     quantity: 1,
     }],
-    success_url: "http://localhost:3000/orders/complete/#{order.id}",
-    cancel_url: 'http://localhost:3000/orders/cancel',
+    success_url: order_complete_url(order.id),
+    cancel_url: order_cancel_url,
     )
 
 

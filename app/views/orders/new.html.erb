@@ -1,10 +1,16 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+        //Check if the current URL contains '#'
+        if(document.URL.indexOf("#")==-1){
+            // Set the URL to whatever it was plus "#".
+            url = document.URL+"#";
+            location = "#";
 
-<script>
-    function refreshwindow() {
-
-    }
+            //Reload the page
+            location.reload(true);
+        }
+    });
 </script>
-
 <h1 class="list-item">
 Your order
 </h1>
@@ -34,7 +40,8 @@ Your order
 var stripe = Stripe('pk_test_9rD5F4TuUHm6V7yY2VR9fcuk00nzmLWDPO');
 
 function redirectToStripe() {
-    window.location.reload();
+    // This was a fix for localhost but does not work on heroku
+    // window.location.reload();
     stripe.redirectToCheckout({
       sessionId: '<%= @session.id %>'
       }).then(function (result) {

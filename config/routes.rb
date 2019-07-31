@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 
   # payments route
   get 'orders', to: 'orders#new', as: 'new_order'
-  get 'orders/complete/:id', to: 'orders#complete'
-  get 'orders/cancel', to: 'orders#cancel'
+  get 'orders/complete/:id', to: 'orders#complete', as: 'order_complete'
+  get 'orders/cancel', to: 'orders#cancel', as: 'order_cancel'
   get 'orders/new'
   get 'orders/history', to: 'orders#history', as: 'orders_history'
   devise_for :users
