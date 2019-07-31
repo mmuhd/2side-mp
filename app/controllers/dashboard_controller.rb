@@ -45,6 +45,33 @@ class DashboardController < ApplicationController
       end
     end
 
+    def hide_listing
+      status = params[:s]
+      listing =  Listing.find(params[:id])
+      if status == "1"
+        listing.alive = false
+        if listing.save
+          redirect_to user_dashboard_path
+          flash[:notice] = "Hide listing"
+        else
+          redirect_to user_dashboard_path
+          flash[:alert] = "Oh no somethings broken"
+        end
+      elsif status == "0"
+        listing.alive = true
+        if listing.save
+          redirect_to user_dashboard_path
+          flash[:notice] = "UnHide listing"
+        else
+          redirect_to user_dashboard_path
+          flash[:alert] = "Oh no somethings broken"
+        end
+      else
+        redirect_to user_dashboard_path
+        flash[:alert] = "Oh no somethings broken"
+      end
+
+    end
 
     def delete_listing
       listing = Listing.find(params[:id])
