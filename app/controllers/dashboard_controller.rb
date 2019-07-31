@@ -46,31 +46,26 @@ class DashboardController < ApplicationController
     end
 
     def hide_listing
-      status = params[:s]
       listing =  Listing.find(params[:id])
-      if status == "1"
+      case params[:s]
+      when "1"
         listing.alive = false
         if listing.save
           redirect_to user_dashboard_path
-          flash[:notice] = "Hide listing"
-        else
-          redirect_to user_dashboard_path
-          flash[:alert] = "Oh no somethings broken"
+          flash[:alert] = "Updated"
         end
-      elsif status == "0"
+
+      when "0"
         listing.alive = true
         if listing.save
           redirect_to user_dashboard_path
-          flash[:notice] = "UnHide listing"
-        else
-          redirect_to user_dashboard_path
-          flash[:alert] = "Oh no somethings broken"
+          flash[:alert] = "Updated"
         end
+
       else
         redirect_to user_dashboard_path
         flash[:alert] = "Oh no somethings broken"
       end
-
     end
 
     def delete_listing
