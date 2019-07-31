@@ -1,0 +1,11 @@
+<h1>Order History</h1>
+
+
+<% @order_history.each do |o| %>
+
+  <%= "Item #{o.listing.name}" %>
+  <%= "Seller #{o.user.name}" %>
+  <%= "Email #{o.user.email}" %>
+  <br>
+
+<% end %>

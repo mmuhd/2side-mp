@@ -1,6 +1,6 @@
 class AppController < ApplicationController
   def index
-    @new_listings = Listing.where(alive: true).last(6)
+    @new_listings = Listing.where(alive: true).last(10)
   end
 
   def about
