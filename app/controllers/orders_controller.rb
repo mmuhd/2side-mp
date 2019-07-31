@@ -29,8 +29,16 @@ class OrdersController < ApplicationController
     cancel_url: 'http://localhost:3000/orders/cancel',
     )
 
-    order.session_id = @session.id
-    order.save
+
+
+    if Order.where(session_id: @session.id).count > 1
+        order.destroy
+        redirect_to root_path
+        flash[:alert] = "We had a error"
+      else
+        order.session_id = @session.id
+        order.save
+    end
 
   end
 
@@ -43,8 +51,9 @@ class OrdersController < ApplicationController
         order.save
         @completed_order = order
         if @completed_order.completed = true
-          email_seller(@completed_order.user.email, @completed_order.user.name, @completed_order.listing, User.find(@completed_order.buyer).name, User.find(@completed_order.buyer).email)
-          email_buyer(User.find(@completed_order.buyer).name, User.find(@completed_order.buyer).email, @completed_order.listing)
+          # email_seller(@completed_order.user.email, @completed_order.user.name, @completed_order.listing, User.find(@completed_order.buyer).name, User.find(@completed_order.buyer).email)
+          # email_buyer(User.find(@completed_order.buyer).name, User.find(@completed_order.buyer).email, @completed_order.listing)
+          flash[:notice] = "You will recive a email shortly  (Note this is temp disabled)"
         end
       else
         redirect_to show_path
@@ -78,5 +87,10 @@ class OrdersController < ApplicationController
                     :text => "To Recive your product contact #{order.user.name} @ #{order.user.email}"
   end
 
+
+  before_action :user_signed_in?
+  def history
+    @order_history = Order.where(buyer: current_user.id).where(completed: true)
+  end
 
 end

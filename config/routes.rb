@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'orders/complete/:id', to: 'orders#complete'
   get 'orders/cancel', to: 'orders#cancel'
   get 'orders/new'
+  get 'orders/history', to: 'orders#history', as: 'orders_history'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
