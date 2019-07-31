@@ -1,3 +1,4 @@
+#!/bin/bash
 
 TEST_LOG="log/test_results.log"
 
