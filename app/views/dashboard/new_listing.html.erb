@@ -3,15 +3,15 @@
 <div class="new-listing-field">
 <%= form_with url: create_listing_path do |form| %>
   <%= form.label :name, "Name"%>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, :required => true %>
   <%= form.label :body, "Description" %>
-  <%= form.text_field :body %>
+  <%= form.text_field :body, :required => true %>
   <%= form.label :price, "Price" %>
-  <%= form.number_field :price %>
+  <%= form.number_field :price, :required => true %>
   <%= form.label :category, "Category" %>
-  <%= form.select :category, ["Domain","WebSite","App"]%>
+  <%= form.select :category, ["Domain","WebSite","App"] %>
   <%= form.label :tag, "Tag" %>
-  <%= form.select :tag, ["ecom","template","wordpress"]%>
+  <%= form.select :tag, ["ecom","template","wordpress"] %>
   <%= form.file_field :image %>
   <%= form.submit "Create Lising" %>
 <% end %>
