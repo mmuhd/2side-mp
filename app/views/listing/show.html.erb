@@ -3,32 +3,35 @@
   <!--single listing-->
 
 
-  <div class="listing-info">
+  <div class="s_listing-info">
     <h1><%=  @listing.name %></h1>
     <br>
-    <i><h2><%= number_to_currency @listing.price %></h2></i>
+    <%= image_tag 'listing_img.jpg' %>
     <br>
     <% if @listing.price %>
-      <p>
-        <%= number_to_currency @listing.price %>
+      <div id="s_listing_price">
+        <i><h2><%= number_to_currency @listing.price %></h2></i>
         <%= link_to "Buy now", new_order_path(listing_id: @listing.id) %>
-      </p>
+      </div>
     <% end %>
+    <div id="listing_des">
     <h3>Description</h3>
     <%=  @listing.body %>
+    </div>
     <br>
     <br>
     <h5><%= "Category: #{@listing.category} / Tag: #{@listing.tag}" %></h5>
     <br>
     <%=  "Date added #{@listing.created_at}" %>
     <br>
-  </div>
+
   <div class="user-info">
     <i><%=  "Listing by #{@listing.user.name}" %></i>
     <%= link_to 'View Profile', profile_path(@listing.user) %>
     <% if @listing.user.avatar.attached? %>
       <%= image_tag @listing.user.avatar, width: '200px'%>
     <% end %>
+  </div>
   </div>
 
 
@@ -58,9 +61,12 @@
     <% @listings.each do |i| %>
       <% if i.alive %>
         <div class="listing-info">
-          <%= link_to  "image", show_id_path(i.id) , class: "listing-img"%>
+          <%= link_to show_id_path(i.id) do %>
+
+          <%= image_tag 'listing_img.jpg' , class: "listing-img"%>
           <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
           <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
+            <% end %>
         </div>
       <% end %>
     <% end %>
