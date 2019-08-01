@@ -1,5 +1,6 @@
 @import "parts/nav";
 @import "parts/all-listings";
+@import "parts/single_listing";
 
 *,
 html {
@@ -11,8 +12,8 @@ html {
   display: block;
   z-index: 100;
   position: absolute;
-  background-color: gray;
-  color: aquamarine;
+  background-color: rgba(153,153,153, 0.9);
+  color: white;
   text-align: center;
   margin-top: 75px;
   right: 10px;
@@ -20,4 +21,26 @@ html {
 
 #dash_splash {
   width: 100vw;
+}
+
+.field {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.actions {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#links_devise {
+  display: block;
+  //flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
 }
