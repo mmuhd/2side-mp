@@ -4,9 +4,13 @@
   <img src="https://img.shields.io/twitter/url/https/github.com/BoooTv/2side-mp?style=for-the-badge"/>
 </p>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/18bc4e7a77fc44c2869c9d27e98d4bcd)](https://app.codacy.com/app/huxhales/2side-mp?utm_source=github.com&utm_medium=referral&utm_content=BoooTv/2side-mp&utm_campaign=Badge_Grade_Dashboard)
+
+
 > A Two Sided Marketplace
 
 ## Author
+
 
 👤 **Huxley**
 
@@ -16,7 +20,6 @@
 
 - Github: [@carlmccabe](https://github.com/carlmccabe)
 
-carlmccabe
 
 ## Show your support
 

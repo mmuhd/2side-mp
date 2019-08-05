@@ -1,29 +1,33 @@
 .listings {
-  background-color: coral;
+  background-color: rgba(153,153,153, 0.8);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
   .listing-info {
     height: 200px;
     width: 200px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #999999;
+    background-color: rgba(153,153,153, 0.5);
     .listing-name {
-      background-color: #4f2eff;
+      //background-color: #4f2eff;
       display: block;
-
+      margin-left: 10px;
+      font-weight: bold;
     }
     .listing-price {
-      background-color: #b0a317;
+      //background-color: #b0a317;
       display: block;
+      margin-left: 15px;
     }
   .listing-img {
     height: 150px;
     display: block;
     margin: auto;
+    padding: 5px;
+    border-radius: 10px;
   }
 
   }

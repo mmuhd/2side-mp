@@ -4,13 +4,15 @@
     <br/>
 </div>
 <div class="listings">
-    <% @new_listings.each do |i| %>
+  <% @new_listings.each do |i| %>
     <% if i.alive %>
-    <div class="listing-info">
-    <%= link_to  "image", show_id_path(i.id), class: "listing-img"%>
-    <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
-    <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
-    </div>
+      <div class="listing-info">
+        <%= link_to show_id_path(i.id) do %>
+          <%= image_tag 'listing_img.jpg' , class: "listing-img"%>
+          <%= content_tag 'span', "Name #{i.name}", class: "listing-name" %>
+          <%= content_tag 'span', "Price $#{i.price.round(2)}" , class: "listing-price" %>
+        <% end %>
+      </div>
     <% end %>
-    <% end %>
+  <% end %>
 </div>
