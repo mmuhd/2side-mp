@@ -1,4 +1,5 @@
 class ListingController < ApplicationController
+
   def show
     if params[:id]
       if Listing.where(id: params[:id]).count.zero?
@@ -6,6 +7,9 @@ class ListingController < ApplicationController
         flash[:alert] = "Error finding id"
       else
         @listing = Listing.find(params[:id])
+        if @listing.alive != true || @listing.deleted != false
+          redirect_to show_path
+        end
       end
     elsif params[:like]
       @listings = Listing.where('name LIKE ?', '%' + params[:like] + '%').where(alive: true).where(deleted: false)
@@ -49,6 +53,64 @@ class ListingController < ApplicationController
       redirect_to user_dashboard_path
     end
 
+  end
+
+  # This is not yet implemented
+  # def update
+  #   @listing = Listing.where(id: params[:id])
+  #   if @listing.save
+  #     # success
+  #   else
+  #     # error handling
+  #   end
+  # end
+  #
+
+  def hide
+    listing =  Listing.find(params[:id])
+    if listing.user.id == current_user.id
+      case params[:s]
+      when "1"
+        listing.alive = false
+        if listing.save
+          redirect_to user_dashboard_path
+          flash[:alert] = "Updated"
+        end
+
+      when "0"
+        listing.alive = true
+        if listing.save
+          redirect_to user_dashboard_path
+          flash[:alert] = "Updated"
+        end
+
+      else
+        redirect_to user_dashboard_path
+        flash[:alert] = "Oh no somethings broken"
+      end
+    else
+      redirect_to root_path
+      flash[:alert] = "please do not do this as you will recive a ban"
+    end
+
+  end
+
+  def delete
+    listing = Listing.find(params[:id])
+    if listing.user.id == current_user.id
+      listing.deleted = true
+      listing.alive = false
+      if listing.save
+        flash[:alert] = "Listing #{params[:id]} deleted"
+        redirect_to user_dashboard_path
+      else
+        flash[:alert] = "Failed to delete listing #{params[:id]}"
+        redirect_to user_dashboard_path
+      end
+    else
+      redirect_to root_path
+      flash[:alert] = "please do not do this as you will recive a ban"
+    end
   end
 
 
