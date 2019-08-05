@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # User
   get 'dashboard/dashboard', to: 'dashboard#dashboard', as: 'user_dashboard'
   get 'dashboard/new_listing', to: 'dashboard#new_listing', as: 'new_listing'
-  post 'dashboard/create_listing', to: 'dashboard#create_listing', as: 'create_listing'
+
   post 'dashboard/hide_listing/:id/:s', to: 'dashboard#hide_listing', as: 'hide_listing'
   delete 'dashboard/delete_listing/:id', to: 'dashboard#delete_listing', as: 'delete_listing'
   get 'app/profile/:id', to: 'app#profile', as: 'profile'
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'listing/show/:id', to: 'listing#show', as: 'show_id'
   get 'listing/show', to: 'listing#show', as: 'show'
   post 'listing/show', to: 'listing#show', as: 'show_search'
+  post 'dashboard/create_listing', to: 'listing#create', as: 'create_listing'
 
 
   # payments route
