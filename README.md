@@ -28,75 +28,81 @@ Give a ⭐️ if this project helped you!
 
 [Github](https://github.com/BoooTv/2side-mp)
 
- ### Description of your project, including,
+### Description of your project, including,
+
 - Problem definition / purpose
+
 ##### Functionality / features
+
 - Payment
 - Create listings
 - Buy items
-- leave reviews
-
+- Leave reviews
 
 ##### ScreenShots
 
-
 ### TechStack
+
 ##### FrontEnd
-- html
-- scss
-- javascript
+
+- HTML
+- SCSS
+- Javascript
+
 ##### BackEnd
-- ruby
-- ruby on rails
+
+- Ruby
+- Ruby on rails
+
 ##### Database
-- postgresql
+
+- Postgresql
+
 ##### Other
-- heroku (For hosting project)
-- cloudanary (For image hosting)
+
+- Heroku (For hosting project)
+- Cloudanary (For image hosting)
 - Stripe (payment)
-- mailgun (email)
-    
-    
-  ### Set up and run  
-  Setting up and running is very simple
-    
-    `
-    git clone https://github.com/BoooTv/2side-mp &&
-    cd 2side-mp &&
-    bundle install && 
-    rails db:setup &&
-    rails s
-    `
-    
-  Then open localhost:3000 in your browser
-    
-    
-## Design documentation including,
+- Mailgun (email)
+
+### Set up and run
+
+Setting up and running is very simple.
+`git clone https://github.com/BoooTv/2side-mp && cd 2side-mp && bundle install && rails db:setup && rails s`
+Then open localhost:3000 in your browser
+
+## Design documentation including
+
 - Design process
+
 ###### User stories
+
 Completed user stories
 ![user](docs/user_stories.png)
 
 - A workflow diagram of the user journey/s.
 
 #### Design and layout
+
 ##### Wireframe
+
 ![Wireframe](docs/Wireframe.png "Wireframe")
 
 ##### Styling
+
 Color pallet
 ![color](docs/color_pallet.png "color")
 
+##### Database Entity Relationship Diagrams and design
 
-
-
- ##### Database Entity Relationship Diagrams and design
 ![database](docs/2sidemp.png?raw=true "Database diagram")
+
 - Details of planning process including,
 
 ### Project Planning and Timeline
 
 #### Project management
+
 For project management we decided to use [github projects](https://github.com/BoooTv/2side-mp/projects/1)
 ![project_managemt](docs/project_managment.png)
 We used a feature branching workflow. Here is some of the the closed pull requests ![branch](docs/branch.png)
@@ -113,9 +119,11 @@ We used a feature branching workflow. Here is some of the the closed pull reques
 - Describe the architecture of your App.
 - Explain the different high-level components (abstractions) in your App.
 - Detail any third party services that your App will use.
-#### Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-   A similar market place would be https://flippa.com . Flippa is a marketplace to sell everything include websites, apps, domains and businesses.
-   
+
+#### Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)
+
+A similar market place would be <https://flippa.com>. Flippa is a marketplace to sell everything include websites, apps, domains and businesses.
+
 - Discuss the database relations to be implemented.
 - Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 - Provide User stories for your App.
