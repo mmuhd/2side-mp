@@ -6,8 +6,8 @@
 
 <!--Some tmp links to make life ez-->
 
-<%= link_to ' Edit Profile /', edit_user_registration_path, class:"top-nav-link"%>
-<%= link_to " create listing /", new_listing_path %>
+<%= link_to ' Edit Profile /', edit_user_registration_path%>
+<%= link_to " Create listing /", new_listing_path %>
 <%= link_to " Order History /", orders_history_path %>
 
 
@@ -15,9 +15,8 @@
 <div>
   <% @my_listings.each do |l| %>
     <br>
-    <%= l.name %>
-    :([|\{?}/|]):
-    <%= l.created_at %>
+    <%= "Listing name: #{l.name}" %>
+    <%= "Created date: #{l.created_at}" %>
     <%= link_to("Delete", delete_listing_path(l.id), method: :delete) %>
     <% if l.alive %>
       <%= link_to("Hide", hide_listing_path(l.id, 1), method: :post) %>
