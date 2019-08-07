@@ -144,7 +144,7 @@ Completed user stories
 #### Database Entity Relationship Diagrams
 
 ![database](docs/2sidemp.png "Database diagram")
-![Relations](docs/Relations.png "Database diagram")
+
 
 - Details of planning process including,
 
@@ -173,7 +173,7 @@ The application is simullar to a 2-sided e-commerce marketplace called Flippa. F
 A `User` is our main model so everything relates to user. 
 For example a `user` can have many `listings` which is one-to-many relation or `user` many have lots of `orders` which is many-to-many.
 
-
+![Relations](docs/Relations.png "Database diagram")
 
 
 `13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.`
@@ -328,11 +328,7 @@ For this  project we used Heroku as our host. Heroku is Platform as a service or
 </table>
 
 
-- Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-- Discuss the database relations to be implemented.
-- Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-- Provide your database schema design.
-- Provide User stories for your App.
+
 
 - Describe the way tasks are allocated and tracked in your project.
 - Discuss how Agile methodology is being implemented in your project.
