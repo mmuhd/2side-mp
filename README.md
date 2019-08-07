@@ -42,11 +42,9 @@ Code MP is a two sided marketplace for people to find/sell everything from code 
 - Buy items
 - leave reviews
 
-[top](#Contents)
 
 #### User Interface
 
-[top](#Contents)
 
 ### Technology Stack
 
@@ -73,13 +71,11 @@ Code MP is a two sided marketplace for people to find/sell everything from code 
 
 - Devise
 
-[top](#Contents)
 
 ### Security
 
 Secrurity questions
 
-[top](#Contents)
 
 ## Setup and run
 
@@ -91,7 +87,6 @@ Then open localhost:3000 in your browser
 
 or
 
-[top](#Contents)
 
 ### Full Explanation
 
@@ -121,7 +116,6 @@ or use shorthand
 
 explain? architecture
 
-[top](#Contents)
 
 ## Design
 
@@ -204,34 +198,47 @@ We used a feature branch workflow.
 Which is achieved by.
 
 
-
+<table>
+<tr>
 `git pull`' on master branch
-
+</tr>
+<tr>
 Create a new branch with: `git checkout -b branch-name`
-
+</tr>
+<tr>
 Commit new work to the new branch
-
+</tr>
+<tr>
 `git add files` to add files
-
+</tr>
+<tr>
 `git commit -m "your message"`
-
+</tr>
+<tr>
 Check out master `git checkout master`
-
+</tr>
+<tr>
 Pull any new code `git pull master`
-
+</tr>
+<tr>
 Return to branch `git checkout branch`
-
+</tr>
+<tr>
 merger any changes `git merge master`
-
+</tr>
+<tr>
 Checkout back to master `git checkout -b master`
-
+</tr>
+<tr>
 Go to GitHub and merge into master with a new git pull request
-
+</tr>
+<tr>
 `git pull` on master branch
-
+</tr>
+<tr>
 Delete the branch if not required after merging to master `git branch -d branch-name`
-
-
+</tr>
+</table>
 
 
 ### Wireframes
