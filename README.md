@@ -128,9 +128,16 @@ explain? architecture
 Intro
 
 - Design process
-- User stories
+
+
+#### User stories
+
+Completed user stories
+![user](docs/user_stories.png)
+
+
 - A workflow diagram of the user journey/s.
-- Wireframes
+
 
 ### Database
 
@@ -231,11 +238,20 @@ Delete the branch if not required after merging to master `git branch -d branch-
 We have done both mobile and desktop wireframes
 ![Wireframe](docs/Wireframe.png "Wireframe")
 
+##### Styling
+
+Color pallet
+![color](docs/color_pallet.png "color")
+
 ### Project Planning and Timeline
 
 #### Project management
 
 For project management we decided to use [github projects](https://github.com/BoooTv/2side-mp/projects/1)
+![project_managemt](docs/project_managment.png)
+We used a feature branching workflow. Here is some of the the closed pull requests ![branch](docs/branch.png)
+
+
 
 Describe the way tasks are allocated and tracked in your project.
 
@@ -267,12 +283,14 @@ For this  project we used Heroku as our host. Heroku is Platform as a service or
 - Explain the different high-level components (abstractions) in your App.
 ### Third Party / Gems
  `Detail any third party services that your App will use.`
+ Mailgun
+ - mailgun is used to send emails using there api
+ 
+ ( this was added but i got banned so needs fixing before it can work again )
  
  Stripe
  - We are using stripe to handle payments. They are one of the leading companys in payment managents. For our project we have used only the very basic but stripe can also handle subscripts and other thing related to payments.
  
- Heroku
- - 
  
  Cloudinary Cloud Storage
  - Cloudinary is a digital asset hosting platform which we are using to host images for user avatar and listing images.
@@ -315,7 +333,6 @@ For this  project we used Heroku as our host. Heroku is Platform as a service or
 - Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 - Provide your database schema design.
 - Provide User stories for your App.
-- Provide Wireframes for your App.
 
 - Describe the way tasks are allocated and tracked in your project.
 - Discuss how Agile methodology is being implemented in your project.
