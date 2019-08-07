@@ -1,17 +1,9 @@
 <script type="text/javascript">
-  function reload() {
-      $(document).ready(function(){
-          //Check if the current URL contains '#'
-          if(document.URL.indexOf("#")==-1){
-              // Set the URL to whatever it was plus "#".
-              url = document.URL+"#";
-              location = "#";
+  // function main() {
+  //     window.location.reload();
+  //     redirectToStripe();
+  // }
 
-              //Reload the page
-              location.reload(true);
-          }
-      });
-  }
 </script>
 <h1 class="list-item">
 Your order
@@ -33,7 +25,7 @@ Your order
 </tbody>
 </table>
 
-<button id="pay-now" onload="reload()">
+<button id="pay-now" onclick="redirectToStripe()">
   Checkout Now
 </button>
 
@@ -52,8 +44,8 @@ function redirectToStripe() {
       // using `result.error.message`.
 });
 }
-document.querySelector("#pay-now").addEventListener("click",
-redirectToStripe)
+// document.querySelector("#pay-now").addEventListener("click",
+// redirectToStripe)
 </script>
 
 
