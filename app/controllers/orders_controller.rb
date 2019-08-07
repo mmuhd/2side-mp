@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     order.save
 
 
-    @session = Stripe::Checkout::Session.create(
+    session = Stripe::Checkout::Session.create(
     payment_method_types: ['card'],
     line_items: [{
     name: @listing.name,
@@ -32,14 +32,16 @@ class OrdersController < ApplicationController
 
 
 
-    if Order.where(session_id: @session.id).count > 1
+    if Order.where(session_id: session.id).count > 1
         order.destroy
         redirect_to root_path
         flash[:alert] = "We had a error"
       else
-        order.session_id = @session.id
+        order.session_id = session.id
         order.save
     end
+
+     @session = session
 
   end
 

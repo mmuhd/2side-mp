@@ -1,16 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function(){
-        //Check if the current URL contains '#'
-        if(document.URL.indexOf("#")==-1){
-            // Set the URL to whatever it was plus "#".
-            url = document.URL+"#";
-            location = "#";
-
-            //Reload the page
-            location.reload(true);
-        }
-    });
-</script>
 <h1 class="list-item">
 Your order
 </h1>
@@ -35,6 +22,7 @@ Your order
   Checkout Now
 </button>
 
+
 <script src="https://js.stripe.com/v3/"></script>
 <script>
 var stripe = Stripe('pk_test_9rD5F4TuUHm6V7yY2VR9fcuk00nzmLWDPO');
@@ -50,8 +38,7 @@ function redirectToStripe() {
       // using `result.error.message`.
 });
 }
-document.querySelector("#pay-now").addEventListener("click",
-redirectToStripe)
+document.querySelector("#pay-now").addEventListener("click", redirectToStripe)
 </script>
 
 
