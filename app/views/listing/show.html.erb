@@ -11,7 +11,7 @@
     <% if @listing.price %>
       <div id="s_listing_price">
         <i><h2><%= number_to_currency @listing.price %></h2></i>
-        <%= link_to "Buy now", new_order_path(listing_id: @listing.id) %>
+        <%= link_to "Buy now", new_order_path(listing_id: @listing.id), data: { turbolinks: false } %>
       </div>
     <% end %>
     <div id="listing_des">

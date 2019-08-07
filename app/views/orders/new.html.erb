@@ -1,10 +1,16 @@
-<script type="text/javascript">
-  // function main() {
-  //     window.location.reload();
-  //     redirectToStripe();
-  // }
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function(){-->
+<!--        //Check if the current URL contains '#'-->
+<!--        if(document.URL.indexOf("#")==-1){-->
+<!--            // Set the URL to whatever it was plus "#".-->
+<!--            url = document.URL+"#";-->
+<!--            location = "#";-->
 
-</script>
+<!--            //Reload the page-->
+<!--            location.reload(true);-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
 <h1 class="list-item">
 Your order
 </h1>
@@ -25,9 +31,18 @@ Your order
 </tbody>
 </table>
 
-<button id="pay-now" onclick="redirectToStripe()">
+<button id="pay-now">
   Checkout Now
 </button>
+
+
+<!--<script>-->
+<!--  stripe.redirectToCheckout({-->
+<!--      sessionId: '<%#= @session.id %>'-->
+<!--  })-->
+<!--    console.log()-->
+<!--</script>-->
+
 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
@@ -44,8 +59,7 @@ function redirectToStripe() {
       // using `result.error.message`.
 });
 }
-// document.querySelector("#pay-now").addEventListener("click",
-// redirectToStripe)
+document.querySelector("#pay-now").addEventListener("click", redirectToStripe)
 </script>
 
 
