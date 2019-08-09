@@ -15,14 +15,17 @@ Check out the [authors](#Authors)
 
 [What is Code MP?](#what-is-code-mp)
 
-- [Features](#features)
-- [User Interface](#user-interface)
-- [Technology Stack](#technology-stack)
-  - [Frontend](#frontend)
-  - [Backend](#backend)
-  - [Database](#database)
-  - [Hosting](#hosting)
+[Features](#features)
+
+[Technology Stack](#technology-stack)
+
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Database](#database)
+- [Hosting](#hosting)
 - [Security](#security)
+- [Software](#software)
+- [Services](#services)
 
 [Setup and Run](#setup-and-run)
 
@@ -69,10 +72,6 @@ The application is simullar to the e-commerce marketplace called Flippa. Flippa 
 - Create listings
 - Buy items
 - leave reviews
-
-[top](#Contents)
-
-#### User Interface
 
 [top](#Contents)
 
@@ -124,9 +123,18 @@ The application is simullar to the e-commerce marketplace called Flippa. Flippa 
 
 ### Security
 
-- Discuss and analyse requirements related to information system security.
-- Discuss methods you will use to protect information and data.
-- Research what your legal obligations are in relation to handling user data.
+#### Third party
+
+Firstly, passwords for uses are hashed by Devise, which keeps their password safe.
+Transactions are protected by making all purchases through stripe.
+Stripe uses HTTPS for all services, to protect people from tampering the website while you enter sensitive data.
+Stripe also uses decyrption keys stored on different machines to protect sensitive data.
+Stripe also encourages people to try and break their security, offering a cash reward for informing them of the breach. Even though this may seem dangerous, it gives benefits for calling out a hole rather than illegally abusing it.
+
+#### Users
+
+Users must be signed in to purchase
+User can hide and un hide their listing. When hidden the URL wf the listing page will redirect to all listings page. Similarly, delete will do the same but with removal of the listing from the Users listing. It will however remain in order history for users who have purchased it.
 
 [top](#Contents)
 
@@ -165,8 +173,6 @@ Start Rails server
 or use shorthand
 
 `rails s`
-
-explain? architecture
 
 [top](#Contents)
 
@@ -245,7 +251,9 @@ Admin is a future enhancement that will reference a user. This will give the use
 
 For project management we decided to use [github projects](https://github.com/BoooTv/2side-mp/projects/1)
 ![project_managemt](docs/project_managment.png)
-We used a feature branching workflow. Here is some of the the closed pull requests ![branch](docs/branch.png)
+We used a feature branching workflow. Here is some of the the closed pull requests
+
+![branch](docs/branch.png)
 
 #### Timeline
 
@@ -334,6 +342,8 @@ Delete the branch if not required after merging to master `git branch -d branch-
 
 ## Authors
 
+Feel free to get in contact with us!
+
 👤 **Huxley**
 
 - Github: [@BoooTv](https://github.com/BoooTv)
@@ -342,7 +352,7 @@ Delete the branch if not required after merging to master `git branch -d branch-
 
 - Github: [@carlmccabe](https://github.com/carlmccabe)
 
-## Show your support
+### Show your support
 
 Give a ⭐️ if this project helped you!
 
