@@ -73,8 +73,6 @@ The application is simullar to the e-commerce marketplace called Flippa. Flippa 
 - Buy items
 - leave reviews
 
-[top](#Contents)
-
 ### Technology Stack
 
 #### FrontEnd
@@ -135,8 +133,6 @@ Stripe also encourages people to try and break their security, offering a cash r
 
 Users must be signed in to purchase
 User can hide and un hide their listing. When hidden the URL wf the listing page will redirect to all listings page. Similarly, delete will do the same but with removal of the listing from the Users listing. It will however remain in order history for users who have purchased it.
-
-[top](#Contents)
 
 ## Setup and run
 
@@ -269,28 +265,41 @@ Which is achieved by.
 
 `git pull`' on master branch
 
+</tr>
+<tr>
 Create a new branch with: `git checkout -b branch-name`
-
+</tr>
+<tr>
 Commit new work to the new branch
-
+</tr>
+<tr>
 `git add files` to add files
-
+</tr>
+<tr>
 `git commit -m "your message"`
-
+</tr>
+<tr>
 Check out master `git checkout master`
-
+</tr>
+<tr>
 Pull any new code `git pull master`
-
+</tr>
+<tr>
 Return to branch `git checkout branch`
-
+</tr>
+<tr>
 merger any changes `git merge master`
-
+</tr>
+<tr>
 Checkout back to master `git checkout -b master`
-
+</tr>
+<tr>
 Go to GitHub and merge into master with a new git pull request
-
+</tr>
+<tr>
 `git pull` on master branch
-
+</tr>
+<tr>
 Delete the branch if not required after merging to master `git branch -d branch-name`
 
 [top](#Contents)
