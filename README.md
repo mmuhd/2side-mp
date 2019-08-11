@@ -357,10 +357,11 @@ Delete the branch if not required after merging to master `git branch -d branch-
 
 Right now there are few places to sell or buy projects. One of the notable ones is Flippa but it can be expensive if you are selling a small project. Another is themeforest but this one is more tailored towards mass selling and templates.
 
-Digital information the future and it is a rapidly growing industry. I think there are lot of great ideas and project getting created all the time. But sometimes people loss intrest or dont have time to continue working on them. This is were marketplaces like codemp come in as it allows the creater to pass it onto the next person.
+Digital information the future and it is a rapidly growing industry. I think there are lot of great ideas and project getting created all the time. But sometimes people lose interest or don't have time to continue working on them. This is were marketplaces like codemp come in as it allows the creator to pass it onto the next person to continue working on it.
 
 
-
+Codemp. Will allow the creator the pass there project onto the next person so a idea never stops. We believe you should be able to sell your project with no cost.
+Think of codemp as the gumtree for tech.
 
 
 
