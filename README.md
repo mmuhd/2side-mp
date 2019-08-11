@@ -364,7 +364,9 @@ Digital information the future and it is a rapidly growing industry. I think the
 Codemp. Will allow the creator the pass there project onto the next person so a idea never stops. We believe you should be able to sell your project with no cost.
 Think of codemp as the gumtree for tech.
 
-``
+
+
+`Describe the Architecture of your App`
 
 
 Our app uses MVC - model, views, controller
