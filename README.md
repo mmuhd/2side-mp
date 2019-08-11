@@ -364,8 +364,16 @@ Digital information the future and it is a rapidly growing industry. I think the
 Codemp. Will allow the creator the pass there project onto the next person so a idea never stops. We believe you should be able to sell your project with no cost.
 Think of codemp as the gumtree for tech.
 
+``
 
 
+Our app uses MVC - model, views, controller
+
+Models interact with the database, accessing the required information from there. For instance, a function within the Item model may get all the items from the database where alive is true.
+
+Views are the information that is presented to the viewer. Our view are made in html, css and js, the view are where users can see listing and buy or create a listing.
+
+Controllers pass the information from the model to the view, and also pass information back from the view (such as user input) to the model. For example when a user hide a listing the user will click the hide button in the view and the controller will update the listing with alive = false
 
 ## Authors
 
