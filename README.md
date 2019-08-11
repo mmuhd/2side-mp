@@ -349,6 +349,22 @@ Delete the branch if not required after merging to master `git branch -d branch-
 
 [top](#Contents)
 
+
+
+
+`What is the need (i.e. challenge) that you will be addressing in your project?`
+`Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?`
+
+Right now there are few places to sell or buy projects. One of the notable ones is Flippa but it can be expensive if you are selling a small project. Another is themeforest but this one is more tailored towards mass selling and templates.
+
+Digital information the future and it is a rapidly growing industry. I think there are lot of great ideas and project getting created all the time. But sometimes people loss intrest or dont have time to continue working on them. This is were marketplaces like codemp come in as it allows the creater to pass it onto the next person.
+
+
+
+
+
+
+
 ## Authors
 
 Feel free to get in contact with us!
