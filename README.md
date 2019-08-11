@@ -88,6 +88,7 @@ The application is simullar to the e-commerce marketplace called Flippa. Flippa 
 #### Database
 
 - postgresql
+  - The reason we used postgresql was it was the first database we learn, it is a open source project, works really well with rails and heroku and there is a very large amount of documentation making it easy and simple.
 
 #### Hosting
 
