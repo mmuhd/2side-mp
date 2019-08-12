@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: 'app#index'
 
   # User
-  get 'dashboard/dashboard', to: 'dashboard#dashboard', as: 'user_dashboard'
+  get 'dashboard', to: 'dashboard#dashboard', as: 'user_dashboard'
   get 'dashboard/new_listing', to: 'dashboard#new_listing', as: 'new_listing'
-  get 'app/profile/:id', to: 'app#profile', as: 'profile'
+  get 'profile/:id', to: 'app#profile', as: 'profile'
+  get 'terms', to: 'app#terms', as: 'terms'
 
   # Listings
   get 'listing/show/:id', to: 'listing#show', as: 'show_id'
