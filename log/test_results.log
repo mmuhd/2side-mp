@@ -1,0 +1,418 @@
+
+===================================
+Wed 31 Jul 2019 11:20:33 AEST
+===================================
+
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Finished in 0.09546 seconds (files took 2.24 seconds to load)
+2 examples, 0 failures
+
+
+
+===================================
+Wed 31 Jul 2019 11:29:18 AEST
+===================================
+
+
+ListingController
+  GET #show
+    returns a success response (FAILED - 1)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET #show returns a success response
+     Failure/Error: get :show, params: {id: listing.id}, session: valid_session
+
+     NameError:
+       undefined local variable or method `valid_session' for #<RSpec::ExampleGroups::ListingController::GETShow:0x00007fbe52fdec70>
+     # ./spec/controllers/listing_controller_spec.rb:10:in `block (3 levels) in <top (required)>'
+
+Finished in 0.14186 seconds (files took 2.27 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:8 # ListingController GET #show returns a success response
+
+
+
+===================================
+Wed 31 Jul 2019 11:31:35 AEST
+===================================
+
+
+ListingController
+  GET #show
+    returns a success response (FAILED - 1)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET #show returns a success response
+     Failure/Error: get :show, params: {id: listing.id}, session: valid_session
+
+     NameError:
+       undefined local variable or method `valid_session' for #<RSpec::ExampleGroups::ListingController::GETShow:0x00007fad78da2488>
+     # ./spec/controllers/listing_controller_spec.rb:10:in `block (3 levels) in <top (required)>'
+
+Finished in 0.0586 seconds (files took 2.22 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:8 # ListingController GET #show returns a success response
+
+
+
+===================================
+Wed 31 Jul 2019 11:33:37 AEST
+===================================
+
+
+ListingController
+  GET #show
+    returns a success response (FAILED - 1)
+  GET #show
+    returns a success response (FAILED - 2)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET #show returns a success response
+     Failure/Error: get :show, params: {id: listing.id}, session: valid_session
+
+     NameError:
+       undefined local variable or method `valid_session' for #<RSpec::ExampleGroups::ListingController::GETShow:0x00007f88414072e0>
+     # ./spec/controllers/listing_controller_spec.rb:10:in `block (3 levels) in <top (required)>'
+
+  2) ListingController GET #show returns a success response
+     Failure/Error: get :show, session: valid_session
+
+     NameError:
+       undefined local variable or method `valid_session' for #<RSpec::ExampleGroups::ListingController::GETShow_2:0x00007f884153ea78>
+     # ./spec/controllers/listing_controller_spec.rb:17:in `block (3 levels) in <top (required)>'
+
+Finished in 0.06065 seconds (files took 2.31 seconds to load)
+4 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:8 # ListingController GET #show returns a success response
+rspec ./spec/controllers/listing_controller_spec.rb:16 # ListingController GET #show returns a success response
+
+
+
+===================================
+Wed 31 Jul 2019 11:34:22 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings (FAILED - 1)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET All listings #show returns a success response for all listings
+     Failure/Error: get :show, session: valid_session
+
+     NameError:
+       undefined local variable or method `valid_session' for #<RSpec::ExampleGroups::ListingController::GETAllListingsShow:0x00007fb637930068>
+     # ./spec/controllers/listing_controller_spec.rb:17:in `block (3 levels) in <top (required)>'
+
+Finished in 0.04682 seconds (files took 1.64 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:16 # ListingController GET All listings #show returns a success response for all listings
+
+
+
+===================================
+Wed 31 Jul 2019 11:34:47 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Finished in 0.06028 seconds (files took 1.36 seconds to load)
+3 examples, 0 failures
+
+
+
+===================================
+Wed 31 Jul 2019 11:35:55 AEST
+===================================
+
+
+ListingController
+  GET #show
+    returns a success response (FAILED - 1)
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET #show returns a success response
+     Failure/Error: listing = Listing.last!
+
+     ActiveRecord::RecordNotFound:
+       Couldn't find Listing
+     # ./spec/controllers/listing_controller_spec.rb:9:in `block (3 levels) in <top (required)>'
+
+Finished in 0.06115 seconds (files took 1.35 seconds to load)
+4 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:8 # ListingController GET #show returns a success response
+
+
+
+===================================
+Wed 31 Jul 2019 11:36:15 AEST
+===================================
+
+
+ListingController
+  GET #show
+    returns a success response (FAILED - 1)
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Failures:
+
+  1) ListingController GET #show returns a success response
+     Failure/Error: get :show, params: {id: listing.id}
+
+     NoMethodError:
+       undefined method `id' for nil:NilClass
+     # ./spec/controllers/listing_controller_spec.rb:10:in `block (3 levels) in <top (required)>'
+
+Finished in 0.06089 seconds (files took 1.38 seconds to load)
+4 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:8 # ListingController GET #show returns a success response
+
+
+
+===================================
+Wed 31 Jul 2019 11:46:34 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+
+Finished in 0.07096 seconds (files took 2.37 seconds to load)
+4 examples, 0 failures
+
+
+
+===================================
+Wed 31 Jul 2019 11:51:02 AEST
+===================================
+
+
+An error occurred while loading ./spec/models/order_spec.rb.
+Failure/Error: listing = Listing.create!(name: "test_name", body: "test_body", price: 123, user: user, completed: false)
+
+ActiveModel::UnknownAttributeError:
+  unknown attribute 'completed' for Listing.
+# ./spec/models/order_spec.rb:6:in `block in <main>'
+# ./spec/models/order_spec.rb:3:in `<main>'
+
+Finished in 0.00033 seconds (files took 1.5 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+
+===================================
+Wed 31 Jul 2019 11:53:57 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+  Makes a listing completed
+
+Finished in 0.07161 seconds (files took 1.52 seconds to load)
+5 examples, 0 failures
+
+
+
+===================================
+Wed 31 Jul 2019 12:12:09 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+  Makes a listing completed
+
+Finished in 0.08036 seconds (files took 2.47 seconds to load)
+5 examples, 0 failures
+
+
+
+===================================
+Wed 31 Jul 2019 15:59:47 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings (FAILED - 1)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+  Makes a listing completed
+
+Failures:
+
+  1) ListingController GET All listings #show returns a success response for all listings
+     Failure/Error: expect(response).to be_successful
+       expected `#<ActionDispatch::TestResponse:0x00007fe2e23501c0 @mon_mutex=#<Thread::Mutex:0x00007fe2e2350148>, @mo...ch::Http::Headers:0x00007fe2e2371708 @req=#<ActionController::TestRequest:0x00007fe2e2350350 ...>>>>.successful?` to return true, got false
+     # ./spec/controllers/listing_controller_spec.rb:18:in `block (3 levels) in <top (required)>'
+
+Finished in 0.08356 seconds (files took 2.49 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:16 # ListingController GET All listings #show returns a success response for all listings
+
+
+
+===================================
+Fri 9 Aug 2019 22:10:17 AEST
+===================================
+
+
+ListingController
+  GET All listings #show
+    returns a success response for all listings (FAILED - 1)
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+  Makes a listing completed
+
+Failures:
+
+  1) ListingController GET All listings #show returns a success response for all listings
+     Failure/Error: expect(response).to be_successful
+       expected `#<ActionDispatch::TestResponse:0x00007fcc98eb1218 @mon_mutex=#<Thread::Mutex:0x00007fcc98eb10b0>, @mo...ch::Http::Headers:0x00007fcc98f08e00 @req=#<ActionController::TestRequest:0x00007fcc98eb14e8 ...>>>>.successful?` to return true, got false
+     # ./spec/controllers/listing_controller_spec.rb:18:in `block (3 levels) in <top (required)>'
+
+Finished in 0.07548 seconds (files took 1.37 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/listing_controller_spec.rb:16 # ListingController GET All listings #show returns a success response for all listings
+
+
+
+===================================
+Fri 9 Aug 2019 22:11:04 AEST
+===================================
+
+
+An error occurred while loading ./spec/controllers/listing_controller_spec.rb.
+Failure/Error: Please fix this test
+
+ArgumentError:
+  wrong number of arguments (given 0, expected 2..3)
+# ./spec/controllers/listing_controller_spec.rb:6:in `test'
+# ./spec/controllers/listing_controller_spec.rb:6:in `block in <top (required)>'
+# ./spec/controllers/listing_controller_spec.rb:3:in `<top (required)>'
+
+Finished in 0.00032 seconds (files took 1.39 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+
+===================================
+Fri 9 Aug 2019 22:11:28 AEST
+===================================
+
+
+Listing
+  creates a listing
+  makes sure a listing can be hidden
+
+Order
+  Makes a order
+  Makes a listing completed
+
+Finished in 0.0558 seconds (files took 1.34 seconds to load)
+4 examples, 0 failures
+
+

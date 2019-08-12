@@ -88,6 +88,7 @@ The application is simullar to the e-commerce marketplace called Flippa. Flippa 
 #### Database
 
 - postgresql
+  - The reason we used postgresql was it was the first database we learn, it is a open source project, works really well with rails and heroku and there is a very large amount of documentation making it easy and simple.
 
 #### Hosting
 
@@ -348,6 +349,33 @@ Delete the branch if not required after merging to master `git branch -d branch-
 </table>
 
 [top](#Contents)
+
+
+
+
+`What is the need (i.e. challenge) that you will be addressing in your project?`
+`Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?`
+
+Right now there are few places to sell or buy projects. One of the notable ones is Flippa but it can be expensive if you are selling a small project. Another is themeforest but this one is more tailored towards mass selling and templates.
+
+Digital information the future and it is a rapidly growing industry. I think there are lot of great ideas and project getting created all the time. But sometimes people lose interest or don't have time to continue working on them. This is were marketplaces like codemp come in as it allows the creator to pass it onto the next person to continue working on it.
+
+
+Codemp. Will allow the creator the pass there project onto the next person so a idea never stops. We believe you should be able to sell your project with no cost.
+Think of codemp as the gumtree for tech.
+
+
+
+`Describe the Architecture of your App`
+
+
+Our app uses MVC - model, views, controller
+
+Models interact with the database, accessing the required information from there. For instance, a function within the Item model may get all the items from the database where alive is true.
+
+Views are the information that is presented to the viewer. Our view are made in html, css and js, the view are where users can see listing and buy or create a listing.
+
+Controllers pass the information from the model to the view, and also pass information back from the view (such as user input) to the model. For example when a user hide a listing the user will click the hide button in the view and the controller will update the listing with alive = false
 
 ## Authors
 
